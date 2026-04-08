@@ -25,3 +25,16 @@ cd ..
 ```bash
 python main.py
 ```
+
+## Output Example
+![Terrain Viewshed Output](demo/viewshed_output.png)
+
+**Three-panel visualization:**
+1. **Left (Terrain)**: Synthetic elevation map (0–100m). Red star = observer position (15m height).
+2. **Middle (Viewshed)**: Line-of-sight visibility from observer. White = visible, transparent = occluded by terrain.
+3. **Right (Classification)**: Slope-based traversal classes:
+   - 🟢 Green: ≤10° slope → Flat/traversable
+   - 🟡 Yellow: 10–30° slope → Moderate difficulty  
+   - 🔴 Red: >30° slope → Steep/obstruction
+
+*Runtime: ~12ms for viewshed computation on 256×256 grid (C++, single-threaded, -O3).*
