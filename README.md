@@ -8,15 +8,14 @@ This project directly supports Frontier Systems' mission to "build terrain rende
 - **Hybrid C++/Python architecture** suitable for edge deployment on embedded systems
 
 ## Quick Start
-```bash
-# Install dependencies
-pip install numpy matplotlib scipy
 
-# Build C++ module
+### 1. Install Python Dependencies
+```bash
+pip install -r requirements.txt
+
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j4
 cd ..
 
-# Run pipeline
 python main.py
