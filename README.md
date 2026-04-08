@@ -12,10 +12,16 @@ This project directly supports Frontier Systems' mission to "build terrain rende
 ### 1. Install Python Dependencies
 ```bash
 pip install -r requirements.txt
-
+```
+### 2. Build C++ Module
+```bash
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j4
 cd ..
+```
 
+### 3. Run
+```bash
 python main.py
+```
